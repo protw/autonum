@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.1.19" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>collect_single_tid_anchors.m:  AUTONUM — 
+
+
+
+
+
+</title>
+</head>
+<body class="tc-body">
+
+<section class="tc-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists   tc-tagged-Code%20for%20generating%20the%20object%20type%20indexes " data-tags="[[Code for generating the object type indexes]]" data-tiddler-title="collect_single_tid_anchors.m"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="edit" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+collect_single_tid_anchors.m
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class=" tc-reveal" hidden="true"></div>
+<div class=" tc-reveal">
+<div class="tc-subtitle">
+<a class="tc-tiddlylink tc-tiddlylink-missing" href=".html">
+
+</a> 2nd January 2019 at 8:52pm
+</div>
+</div>
+<div class=" tc-reveal">
+<div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Code for generating the object type indexes
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></div>
+</div>
+
+
+<div class="tc-tiddler-body tc-reveal"><pre><code>function collect_single_tid_anchors(tid_folder, tid_file)
+  global ANCHORS;
+  fid = fopen([tid_folder tid_file '.tid'], 'r');
+  txt = char(fread(fid,Inf,'uchar'))';
+  t = regexp(txt, '&lt;&lt;autonumdisp\s+([^&gt;]+)\s*&gt;&gt;', 'tokens');
+  fclose(fid);
+  
+  for i = 1:length(t)
+    s = t{i}{1};
+    [pars, s] = get_all_pars(s);
+    if (!isfield(ANCHORS.(pars.ns), pars.tid))
+      ANCHORS.(pars.ns).(pars.tid) = ++ANCHORS.(pars.ns).MAX_OBJ_COUNT;
+    endif
+  endfor
+endfunction
+
+function [pars, s] = get_all_pars(s)
+  global matches;
+  matches.tid = '(tid\s*:)';
+  matches.ns = '(ns\s*:)';
+  matches.flds = '.*(tid|ns).*';
+  matches.qtok = '&quot;([^&quot;]+)&quot;';
+  matches.nqtok = '([\w\-\.])';
+  matches.sp = '\s+';
+  matches.sa = '\s*';
+  
+  pars.tid = [];
+  pars.ns  = [];
+  [pars, s] = get_par(pars, s, matches.tid);
+  [pars, s] = get_par(pars, s, matches.ns);
+  if (isempty(pars.tid))
+    [pars, s] = get_par_expl(pars, s, 'tid');
+  endif
+  [pars, s] = get_par_expl(pars, s, 'ns');
+  if (isempty(pars.ns))
+    pars.ns = 'REF';
+  endif
+endfunction
+
+function [pars, s] = get_par_expl(pars, s, fld)
+  s = strtrim(s);
+  if (!isempty(s))
+    [tok, s2, e2] = get_left_tok(s);
+    pars.(fld) = tok;
+    s(s2(1):e2(1)) = [];
+  endif
+endfunction
+
+function [pars, s] = get_par(pars, s, smatch)
+  global matches;
+  [s1, e1] = regexp(s, smatch);
+  if (isempty(e1))
+    return;
+  endif
+  ss = s(e1(1)+1:end);
+  [tok, s2, e2] = get_left_tok(ss);
+  fld = regexp(smatch,matches.flds,'tokens');
+  fld = fld{1}{1};
+  pars.(fld) = tok;
+  s(s1(1):e1(1)+e2(1)) = [];
+endfunction
+
+function [tok, s2, e2] = get_left_tok(ss)
+  global matches;
+  if (!length(ss))
+    tok = '';
+    s2 = [];
+    e2 = [];
+    return;
+  endif
+  [tok, se2] = regexp(ss, ['^' matches.sa matches.qtok], ...
+                 'tokens', 'tokenExtents');
+  d = 1;
+  if (isempty(se2))
+    [tok, se2] = regexp(ss, ['^' matches.sa matches.nqtok], ...
+                   'tokens', 'tokenExtents');
+    d = 0;
+  endif
+  tok = tok{1}{1};
+  s2 = se2{1}(1) - d;
+  e2 = se2{1}(2) + d;
+endfunction</code></pre></div>
+
+
+
+</div>
+
+</p>
+</section>
+</body>
+</html>

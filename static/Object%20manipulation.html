@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.1.19" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Object manipulation:  AUTONUM — 
+
+
+
+
+
+</title>
+</head>
+<body class="tc-body">
+
+<section class="tc-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists   tc-tagged-Idea%20of%20the%20project " data-tags="[[Idea of the project]]" data-tiddler-title="Object manipulation"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="edit" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+Object manipulation
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class=" tc-reveal" hidden="true"></div>
+<div class=" tc-reveal">
+<div class="tc-subtitle">
+<a class="tc-tiddlylink tc-tiddlylink-missing" href=".html">
+
+</a> 3rd January 2019 at 10:17am
+</div>
+</div>
+<div class=" tc-reveal">
+<div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Idea of the project
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></div>
+</div>
+
+
+<div class="tc-tiddler-body tc-reveal"><p>The initial procedure of generating the object type indexes is made by collecting the first occurrence of the following macro expression over all the TW text (see <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Generating%2520the%2520object%2520type%2520indexes.html">Generating the object type indexes</a>):</p><pre><code>&lt;&lt;autonumdisp tid:obj_title ns:obj_type&gt;&gt;</code></pre><p>where</p><ul><li><code>obj_title</code> - a particular object title, which is the value of parameter <code>tid</code> (contractation of <strong>tiddler</strong>). In case <code>obj_title</code> contains spaces it has to be folded in qoutes;</li><li><code>obj_type</code> - a type of this text object (i.e. <code>FRM</code>, <code>IMG</code>, etc.), which the value of parameter <code>ns</code> (contractation of <strong>name space</strong>);</li><li>any of tokens <code>tid:</code> or <code>ns:</code> in the macro call expression <code>autonumdisp</code> can be omitted, however, preserving the order of arguments: first - <code>tid</code>, second - <code>ns</code>. Finally if argument <code>ns</code> is omitted, then its default value is <strong>REF</strong>.</li></ul><p>Putting macro <code>autonumdisp</code> in wiki text pursues two goals:</p><ol><li>initiates the index number for the given object type (name space) according to location of the macro call in the TOC index and inside the tiddler itself;</li><li>usually reveals the complete object depending on the object type.</li></ol><p>After the the object type indexes have been generated and stored three other macros can be used:</p><ul><li>for referencing the object by its number in a corresponding object type index<div><pre><code>&lt;&lt;autonumref tid:obj_title ns:obj_type&gt;&gt;</code></pre></div></li><li>for revealing a complete numbered list of descriptions of objects of a given type (name space)<div><pre><code>&lt;&lt;autonumlist ns:obj_type&gt;&gt;</code></pre></div></li><li>for revealing the number (maximal index) of objects of a given type (name space)<div><pre><code>&lt;&lt;autonum ns:obj_type&gt;&gt;</code></pre></div></li></ul></div>
+
+
+
+</div>
+
+</p>
+</section>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.1.19" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>build_toc_index.m:  AUTONUM — 
+
+
+
+
+
+</title>
+</head>
+<body class="tc-body">
+
+<section class="tc-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists   tc-tagged-Code%20for%20generating%20the%20object%20type%20indexes " data-tags="[[Code for generating the object type indexes]]" data-tiddler-title="build_toc_index.m"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="edit" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+build_toc_index.m
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class=" tc-reveal" hidden="true"></div>
+<div class=" tc-reveal">
+<div class="tc-subtitle">
+<a class="tc-tiddlylink tc-tiddlylink-missing" href=".html">
+
+</a> 2nd January 2019 at 8:27pm
+</div>
+</div>
+<div class=" tc-reveal">
+<div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Code for generating the object type indexes
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></div>
+</div>
+
+
+<div class="tc-tiddler-body tc-reveal"><pre><code>function toc_index = build_toc_index(tid_folder, root_toc_title)
+  global DATA;
+  
+  get_tid_data(tid_folder);
+  ind = init_build_toc(root_toc_title);
+  build_toc(DATA(ind).title, DATA(ind).heading_level);
+
+  a = {DATA.seq_num};
+  for i = 1:length(a)
+    ix(i) = !isempty(a{i});
+  endfor
+  toc_index = find(ix);
+  [~, inds] = sort([DATA(toc_index).seq_num]);
+  toc_index = toc_index(inds);
+endfunction
+
+function build_toc(title, heading_level)
+  global DATA SEQ_NUM;
+  ind = get_title_index(title);
+  ix = [];
+  for i = 1:length(DATA)
+    ind = find(strcmp(DATA(i).tags, title));
+    if (!isempty(ind) &amp;&amp; !isempty(DATA(i).headingorder))
+      ix = [ix i];
+    endif
+  endfor
+  if (isempty(ix))
+    return
+  endif
+  s_headingorder = [];
+  for i = 1:length(ix)
+    s_headingorder = [s_headingorder; 1*DATA(ix(i)).headingorder];
+  endfor
+  [~, ixs] = sortrows(s_headingorder,[1 2 3]);
+  ++heading_level;
+  for i = 1:length(ix)
+    j = ix(ixs(i));
+    DATA(j).heading_level = heading_level;
+    DATA(j).seq_num = ++SEQ_NUM;
+    build_toc(DATA(j).title, heading_level);
+  endfor
+endfunction
+
+function ind = init_build_toc(root_toc_title)
+  global DATA SEQ_NUM;
+  ind = get_title_index(root_toc_title);
+  DATA(ind).heading_level = 1;
+  SEQ_NUM = 1;
+  DATA(ind).seq_num = SEQ_NUM;
+endfunction
+
+function get_tid_data(tid_folder)
+  global DATA;
+  f = dir([tid_folder '*.tid']);
+  for i = 1:length(f)
+    fid = fopen([f(i).folder '\' f(i).name], 'r');
+    txt = fread(fid,inf,'uchar')';
+    fclose(fid);
+    [s, e] = regexp(char(txt), '\r*\n\r*\n');
+    header = char(txt(1:s(1)));
+    t = regexp(header, '^([^:]+):\s([^\n]*)$', 'tokens', 'lineanchors');
+    for j = 1:length(t)
+      DATA(i).(t{j}{1}) = t{j}{2};
+    endfor
+    if(isfield(DATA(i),'tags'))
+      DATA(i).tags = tags2cell (char(DATA(i).tags));
+    endif
+  endfor
+endfunction
+
+function indx = get_title_index(title)
+  global DATA;
+  indx = find(strcmp({DATA(:).title}, title));
+  return;
+endfunction
+
+function tags = tags2cell (x)
+  tags1 = regexp(x, '\[\[([^\]]+)\]\]', 'tokens');
+  [s,e] = regexp(x, '(\[\[[^\]]+\]\])');
+  for i = length(s):-1:1
+    x(s(i):e(i)) = [];
+  endfor
+  tags2 = regexp(x, '([^\s]+)', 'tokens');
+  tags = [tags1{:} tags2{:}];
+endfunction</code></pre></div>
+
+
+
+</div>
+
+</p>
+</section>
+</body>
+</html>

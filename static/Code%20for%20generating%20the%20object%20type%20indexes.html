@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.1.19" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Code for generating the object type indexes:  AUTONUM — 
+
+
+
+
+
+</title>
+</head>
+<body class="tc-body">
+
+<section class="tc-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists   tc-tagged-Code%20used " data-tags="[[Code used]]" data-tiddler-title="Code for generating the object type indexes"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="edit" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+Code for generating the object type indexes
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class=" tc-reveal" hidden="true"></div>
+<div class=" tc-reveal">
+<div class="tc-subtitle">
+<a class="tc-tiddlylink tc-tiddlylink-missing" href=".html">
+
+</a> 2nd January 2019 at 8:50pm
+</div>
+</div>
+<div class=" tc-reveal">
+<div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Code used
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></div>
+</div>
+
+
+<div class="tc-tiddler-body tc-reveal"><p>The main idea is to build the object type indexes for TW under Node.js at a folder where all the TW tiddler files (*.tid) are located in a local computer.</p><p>Because of my illiteracy in JS programming I decided to develop the code using <a class="tc-tiddlylink-external" href="https://www.gnu.org/software/octave/" rel="noopener noreferrer" target="_blank">Octave</a> (free <a class="tc-tiddlylink-external" href="https://www.mathworks.com/" rel="noopener noreferrer" target="_blank">Matlab</a> clone).</p><p>The code contains the main following parts:</p><p><ol class="tc-toc">
+  
+    
+      
+        <li class="toc-item">
+          <a class="tc-tiddlylink tc-tiddlylink-resolves" href="autonum.m.html">autonum.m</a>
+          <ol class="tc-toc">
+  
+</ol>
+        </li>
+      
+    
+  
+    
+      
+        <li class="toc-item">
+          <a class="tc-tiddlylink tc-tiddlylink-resolves" href="build_toc_index.m.html">build_toc_index.m</a>
+          <ol class="tc-toc">
+  
+</ol>
+        </li>
+      
+    
+  
+    
+      
+        <li class="toc-item">
+          <a class="tc-tiddlylink tc-tiddlylink-resolves" href="collect_single_tid_anchors.m.html">collect_single_tid_anchors.m</a>
+          <ol class="tc-toc">
+  
+</ol>
+        </li>
+      
+    
+  
+    
+      
+        <li class="toc-item">
+          <a class="tc-tiddlylink tc-tiddlylink-resolves" href="init_anchor_struct.m.html">init_anchor_struct.m</a>
+          <ol class="tc-toc">
+  
+</ol>
+        </li>
+      
+    
+  
+    
+      
+        <li class="toc-item">
+          <a class="tc-tiddlylink tc-tiddlylink-resolves" href="store_obj_inds.m.html">store_obj_inds.m</a>
+          <ol class="tc-toc">
+  
+</ol>
+        </li>
+      
+    
+  
+</ol></p><p>Of course it would be a good solution to re-write this code using JS for embedding it into TW.  </p></div>
+
+
+
+</div>
+
+</p>
+</section>
+</body>
+</html>
