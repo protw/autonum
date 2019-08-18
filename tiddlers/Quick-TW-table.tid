@@ -1,0 +1,16 @@
+caption: Quick Tiddlywiki table introduction
+created: 20190102214013302
+modified: 20190102214332273
+objtype: TBL
+tags: 
+title: Quick-TW-table
+type: text/vnd.tiddlywiki
+
+|Підпис таблиці|c
+|!heading column 1|!heading column 2|h
+|ліворуч | праворуч|
+| центровано ||
+|>|Об'єднання клітинок (колонок) у рядку|
+|Об'єднання клітинок між рядками|@@color:red;red@@|
+|~|@@color:green;green@@|
+|>|Підніжжя таблиці&trade;|f

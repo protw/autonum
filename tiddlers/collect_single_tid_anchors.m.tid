@@ -1,0 +1,91 @@
+created: 20190102205136677
+headingorder: 030
+modified: 20190102205233008
+tags: [[Code for generating the object type indexes]]
+title: collect_single_tid_anchors.m
+type: text/vnd.tiddlywiki
+
+```
+function collect_single_tid_anchors(tid_folder, tid_file)
+  global ANCHORS;
+  fid = fopen([tid_folder tid_file '.tid'], 'r');
+  txt = char(fread(fid,Inf,'uchar'))';
+  t = regexp(txt, '<<autonumdisp\s+([^>]+)\s*>>', 'tokens');
+  fclose(fid);
+  
+  for i = 1:length(t)
+    s = t{i}{1};
+    [pars, s] = get_all_pars(s);
+    if (!isfield(ANCHORS.(pars.ns), pars.tid))
+      ANCHORS.(pars.ns).(pars.tid) = ++ANCHORS.(pars.ns).MAX_OBJ_COUNT;
+    endif
+  endfor
+endfunction
+
+function [pars, s] = get_all_pars(s)
+  global matches;
+  matches.tid = '(tid\s*:)';
+  matches.ns = '(ns\s*:)';
+  matches.flds = '.*(tid|ns).*';
+  matches.qtok = '"([^"]+)"';
+  matches.nqtok = '([\w\-\.])';
+  matches.sp = '\s+';
+  matches.sa = '\s*';
+  
+  pars.tid = [];
+  pars.ns  = [];
+  [pars, s] = get_par(pars, s, matches.tid);
+  [pars, s] = get_par(pars, s, matches.ns);
+  if (isempty(pars.tid))
+    [pars, s] = get_par_expl(pars, s, 'tid');
+  endif
+  [pars, s] = get_par_expl(pars, s, 'ns');
+  if (isempty(pars.ns))
+    pars.ns = 'REF';
+  endif
+endfunction
+
+function [pars, s] = get_par_expl(pars, s, fld)
+  s = strtrim(s);
+  if (!isempty(s))
+    [tok, s2, e2] = get_left_tok(s);
+    pars.(fld) = tok;
+    s(s2(1):e2(1)) = [];
+  endif
+endfunction
+
+function [pars, s] = get_par(pars, s, smatch)
+  global matches;
+  [s1, e1] = regexp(s, smatch);
+  if (isempty(e1))
+    return;
+  endif
+  ss = s(e1(1)+1:end);
+  [tok, s2, e2] = get_left_tok(ss);
+  fld = regexp(smatch,matches.flds,'tokens');
+  fld = fld{1}{1};
+  pars.(fld) = tok;
+  s(s1(1):e1(1)+e2(1)) = [];
+endfunction
+
+function [tok, s2, e2] = get_left_tok(ss)
+  global matches;
+  if (!length(ss))
+    tok = '';
+    s2 = [];
+    e2 = [];
+    return;
+  endif
+  [tok, se2] = regexp(ss, ['^' matches.sa matches.qtok], ...
+                 'tokens', 'tokenExtents');
+  d = 1;
+  if (isempty(se2))
+    [tok, se2] = regexp(ss, ['^' matches.sa matches.nqtok], ...
+                   'tokens', 'tokenExtents');
+    d = 0;
+  endif
+  tok = tok{1}{1};
+  s2 = se2{1}(1) - d;
+  e2 = se2{1}(2) + d;
+endfunction
+```

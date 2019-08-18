@@ -1,0 +1,40 @@
+created: 20190102205436712
+headingorder: 050
+modified: 20190102220735340
+tags: [[Code for generating the object type indexes]]
+title: store_obj_inds.m
+type: text/vnd.tiddlywiki
+
+```
+function store_obj_inds(tid_folder)
+  global ANCHORS AUTONUM_TW_FOLDER;
+  fld_names = fieldnames(ANCHORS);
+  for i = 1:length(fld_names)
+    ns = fld_names{i};
+    obj_struct = ANCHORS.(ns);
+    if (obj_struct.MAX_OBJ_COUNT < 1)
+      continue;
+    endif
+    tid_fn = [tid_folder regexprep(AUTONUM_TW_FOLDER, '[:/]', '_') ...
+         ns '.tid'];
+    tid_header = build_tid_header(ns);
+    tid_names = fieldnames(obj_struct);
+    fid = fopen(tid_fn,'w');
+    for j = 1:length(tid_header)
+      fprintf(fid, '%s\n', tid_header{j})
+    endfor
+    for j = 1:length(tid_names)
+      fprintf(fid,'%s: %i\n',tid_names{j}, obj_struct.(tid_names{j}))
+    endfor
+    fclose(fid);
+  endfor
+endfunction
+
+function tid_header = build_tid_header(ns)
+  global AUTONUM_TW_FOLDER;
+  tid_header = {
+    'type: application/x-tiddler-dictionary'
+    ['title: ' AUTONUM_TW_FOLDER ns sprintf('\n')]
+  };
+endfunction
+```

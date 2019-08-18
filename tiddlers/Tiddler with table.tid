@@ -1,0 +1,10 @@
+created: 20190102214405750
+headingorder: 010
+modified: 20190102220131293
+tags: [[Another tiddler]]
+title: Tiddler with table
+type: text/vnd.tiddlywiki
+
+Trying to insert a table type object (TBL):
+
+<<autonumdisp Quick-TW-table TBL>>

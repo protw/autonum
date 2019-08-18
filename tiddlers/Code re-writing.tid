@@ -1,0 +1,16 @@
+created: 20190103121132144
+headingorder: 010
+modified: 20190103121734195
+tags: [[Further development]]
+title: Code re-writing
+type: text/vnd.tiddlywiki
+
+The code for generating the object type indexes has to be re-worked and re-written from Octave to JS for Node.js and TW. As a good starting pattern for this an elegant JS plugin titled [[autoref.js|http://autoref.tiddlyspot.com/#%24%3A%2FMAS%2Freference%2Fautoref.js]] by author [[Mark S.|https://groups.google.com/d/msg/tiddlywiki/z7iotkgKQHw/5QrTAkLXDQAJ]] can be considered.
+
+It would be great if somebody from the TW community would complete the development of this code based on the mentioned and other working-outs:
+
+* This [[Autonum project|https://protw.github.io/autonum]] by Olegh Bondarenko;
+* [[autoref.js|http://autoref.tiddlyspot.com/#%24%3A%2FMAS%2Freference%2Fautoref.js]] by Mark S.;
+* [[Footnotes and Textstretch|http://slidesnstories.tiddlyspot.com/]] - not sure who are authors;
+* [[PopupFootnotes|http://braintest.tiddlyspot.com/#PopupFootnotes]] by Danielo Rodriguez;
+* [[Numbers - Titles and Footnotes Test|http://tid.li/tw5/numbers.html]]  by Thomas Elmiger.

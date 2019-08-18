@@ -1,0 +1,64 @@
+created: 20181209074643085
+modified: 20190102221421922
+tags: $:/tags/Macro
+title: $:/boa/macro/autonum
+type: text/vnd.tiddlywiki
+
+\define autonumtid(ns:"REF") $:/boa/autonum/$ns$
+
+\define autonumdisp(tid, ns:"REF")
+<$reveal type="match" default=$ns$ text="REF">
+<$link to="""$tid$""">[<$transclude tiddler=<<autonumtid $ns$>> index="$tid$"/>]</$link>
+</$reveal>
+<$reveal type="match" default=$ns$ text="IMG">
+<div style="text-align:center;">
+[img width=80% [$tid$]]<br/>
+Figure <$transclude tiddler=<<autonumtid $ns$>> index="$tid$"/>. {{$tid$!!caption}}
+</div>
+</$reveal>
+<$reveal type="match" default=$ns$ text="FRM">
+<div style="width:80%;display:inline-block">
+{{$tid$}}
+</div>
+<span style="vertical-align:middle;">
+(<$transclude tiddler=<<autonumtid $ns$>> index="$tid$"/>)</span>
+</$reveal>
+<$reveal type="match" default=$ns$ text="TBL">
+<div style="text-align:center;">
+Table <$transclude tiddler=<<autonumtid $ns$>> index="$tid$"/>. {{$tid$!!caption}}
+</div>
+<div style="text-align:center;">
+
+{{$tid$}}
+</div>
+</$reveal>
+\end
+
+\define autonumref(tid, ns:"REF")
+<$reveal type="match" default=$ns$ text="REF">
+<$link to="""$tid$""">[<$transclude tiddler=<<autonumtid $ns$>> index="$tid$"/>]</$link>
+</$reveal>
+<$reveal type="match" default=$ns$ text="IMG">
+<$link to="""$tid$"""><$transclude tiddler=<<autonumtid $ns$>> index="$tid$"/></$link>
+</$reveal>
+<$reveal type="match" default=$ns$ text="FRM">
+<$link to="""$tid$""">(<$transclude tiddler=<<autonumtid $ns$>> index="$tid$"/>)</$link>
+</$reveal>
+<$reveal type="match" default=$ns$ text="TBL">
+<$link to="""$tid$"""><$transclude tiddler=<<autonumtid $ns$>> index="$tid$"/></$link>
+</$reveal>
+\end
+
+\define autonumlist(ns:"REF")
+<$set name="tidns" value=<<autonumtid $ns$>> >
+<$list filter='[<tidns>indexes[]] -[title[MAX_OBJ_COUNT]]' variable='xyz'>
+<$transclude tiddler=<<tidns>> index=<<xyz>>/>. <$transclude tiddler=<<xyz>> field="caption"/><br/>
+</$list>
+<$set>
+\end
+
+\define autonummax(ns:"REF")
+<$transclude tiddler=<<autonumtid $ns$>> index="MAX_OBJ_COUNT"/>
+\end
+
+<pre><$view/></pre>

@@ -1,0 +1,10 @@
+created: 20190102123406411
+headingorder: 040
+modified: 20190102204910351
+tags: [[Autonum project]]
+title: Code used
+type: text/vnd.tiddlywiki
+
+The autonumbering code consists of the following main parts:
+
+<<toc "Code used" "sort[headingorder]!is[image]">>

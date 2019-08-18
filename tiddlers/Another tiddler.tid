@@ -1,0 +1,16 @@
+created: 20181212144145857
+headingorder: 005
+modified: 20190102221800316
+tags: [[My book (dummy example)]]
+title: Another tiddler
+type: text/vnd.tiddlywiki
+
+<<autonumlist FRM>>
+
+<<autonumref "Біном Н'ютона" FRM>>
+
+Now we are trying to add one more reference <<autonumdisp tid : "JS-1492" ns :REF>> to the collection tagged ''My book''.
+
+Another image is added below:
+
+<<autonumdisp icon-table-of-contents.svg IMG>>

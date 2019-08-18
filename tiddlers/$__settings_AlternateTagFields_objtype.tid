@@ -1,0 +1,11 @@
+color: #2f917a
+created: 20181230110155990
+fieldname: objtype
+hide_in_edit_mode: 
+hide_in_view_mode: true
+label: Object type
+modified: 20181230110404572
+title: $:/settings/AlternateTagFields/objtype
+type: text/vnd.tiddlywiki
+wikify: True
+

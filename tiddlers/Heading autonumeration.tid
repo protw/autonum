@@ -1,0 +1,33 @@
+created: 20190103121319559
+headingorder: 030
+modified: 20190103121518353
+tags: [[Further development]]
+title: Heading autonumeration
+type: text/vnd.tiddlywiki
+
+To complete the internal referencing system the heading autonumeration seems to be necessary.
+
+Among various approaches generation of tiddler icons (via the tiddler field `icon`) having the section number inside could be used.
+
+For example:
+
+* ''drawsvg-digit-2.svg''<div>
+
+```
+<svg xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink = "http://www.w3.org/1999/xlink">
+<text x="20px" y="20px" style="font-size: 28;">2.3.1</text>
+</svg>
+```
+</div>
+* ''TEST.tid''<div>
+
+```
+title: TEST
+icon: drawsvg-digit-2.svg
+tags: [[My book (dummy example)]]
+type: text/vnd.tiddlywiki
+
+...
+```
+</div>

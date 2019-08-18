@@ -1,0 +1,10 @@
+caption: The Fibonacci numbers occur in the sums of "shallow" diagonals in Pascal's triangle
+created: 20181212122021012
+modified: 20181230115723492
+objtype: FRM
+title: Fibbonachi
+type: text/vnd.tiddlywiki
+
+$$
+F_{n}=\sum_{k=0}^{\left\lfloor\frac{n-1}{2}\right\rfloor} \tbinom {n-k-1} k
+$$

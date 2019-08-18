@@ -1,0 +1,44 @@
+created: 20190102122643838
+headingorder: 050
+modified: 20190103101735093
+tags: [[Idea of the project]]
+title: Object manipulation
+type: text/vnd.tiddlywiki
+
+The initial procedure of generating the object type indexes is made by collecting the first occurrence of the following macro expression over all the TW text (see [[Generating the object type indexes]]):
+
+```
+<<autonumdisp tid:obj_title ns:obj_type>>
+```
+
+where
+
+* `obj_title` - a particular object title, which is the value of parameter `tid` (contractation of ''tiddler''). In case `obj_title` contains spaces it has to be folded in qoutes;
+* `obj_type` - a type of this text object (i.e. `FRM`, `IMG`, etc.), which the value of parameter `ns` (contractation of ''name space'');
+* any of tokens `tid:` or `ns:` in the macro call expression `autonumdisp` can be omitted, however, preserving the order of arguments: first - `tid`, second - `ns`. Finally if argument `ns` is omitted, then its default value is ''REF''.
+
+Putting macro `autonumdisp` in wiki text pursues two goals:
+
+# initiates the index number for the given object type (name space) according to location of the macro call in the TOC index and inside the tiddler itself;
+# usually reveals the complete object depending on the object type.
+
+After the the object type indexes have been generated and stored three other macros can be used:
+
+* for referencing the object by its number in a corresponding object type index<div>
+
+```
+<<autonumref tid:obj_title ns:obj_type>>
+```
+</div>
+* for revealing a complete numbered list of descriptions of objects of a given type (name space)<div>
+
+```
+<<autonumlist ns:obj_type>>
+```
+</div>
+* for revealing the number (maximal index) of objects of a given type (name space)<div>
+
+```
+<<autonum ns:obj_type>>
+```
+</div>

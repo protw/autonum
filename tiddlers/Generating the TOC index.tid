@@ -1,0 +1,16 @@
+created: 20190102120158106
+headingorder: 010
+modified: 20190102120826651
+tags: [[Idea of the project]]
+title: Generating the TOC index
+type: text/vnd.tiddlywiki
+
+Generating an index of single articles (tiddlers) included into a book (or whatever this type of publication is called). This index hereafter is called ''TOC index''.
+
+The simplest and sufficient form of this index would be a list of tiddler titles in a predefined order. The order could be predefined in many ways by: 
+
+* the [[StoryRiver list|$:/StoryList]] (the order of tiddlers can be managed by dragging-and-dropping under [[tab Open of the Sidebar|$:/core/ui/SideBar/Open]]), 
+* the [[DefaultTiddlers list|$:/DefaultTiddlers]] (can be set up at [[ControlPanel / Info / Basics|$:/ControlPanel]]), 
+* a macro procedure similar to the [[TOC macro|$:/core/macros/toc]],
+* a manually composed list or
+* other means.

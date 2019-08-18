@@ -1,0 +1,12 @@
+created: 20161226120309260
+modified: 20190103122729921
+title: $:/boa/template/doc-ref
+type: text/vnd.tiddlywiki
+
+@@float:left;margin-right:10pt;width:25%; <a href={{!!pub-link}} target="_blank"><$image source={{!!pub-img}} tooltip={{!!pub-title}}/></a>@@
+
+<h2><a href={{!!pub-link}} target="_blank">{{!!pub-title}}. {{!!pub-authors}}, {{!!pub-author-date}}</a></h2>
+<p>{{!!pub-desc-short}}</p>
+<p>Переклад: {{!!pub-trans-by}}, Видавник: {{!!pub-by}}, Мова: {{!!pub-lang}}, Дата видання: <$view field="pub-date" format="date" template={{$:/language/Tiddler/DateFormat}}/></p>
+
+{{!!pub-desc}}

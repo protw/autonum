@@ -1,0 +1,19 @@
+created: 20190102120249588
+headingorder: 020
+modified: 20190102120753518
+tags: [[Idea of the project]]
+title: Generating the object type indexes
+type: text/vnd.tiddlywiki
+
+Collecting the first occurrence and incremental numbering of every internal text object according to the order of articles (tiddlers) determined by the ''TOC index''. 
+
+Such a numbering is done independently for each type of internal text objects. Altough the set of internal text object types can be determined dynamically, it would be worthwhile to assign the following types of internal text objects preliminary:
+
+* ''TBL'' - tables
+* ''FRM'' - formulas
+* ''REF'' - bibliographical references
+* ''IMG'' - images or graphs
+* ''NOT'' - notes or footnotes
+* ''DEF'' - definitions including abbreviations
+
+In result of this collecting and numbering the ''object type index'' is created for each object type identified.

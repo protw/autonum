@@ -1,0 +1,16 @@
+created: 20190102200554685
+headingorder: 010
+modified: 20190102205013908
+tags: [[Code used]]
+title: Code for generating the object type indexes
+type: text/vnd.tiddlywiki
+
+The main idea is to build the object type indexes for TW under Node.js at a folder where all the TW tiddler files (*.tid) are located in a local computer.
+
+Because of my illiteracy in JS programming I decided to develop the code using [[Octave|https://www.gnu.org/software/octave/]] (free [[Matlab|https://www.mathworks.com/]] clone).
+
+The code contains the main following parts:
+
+<<toc "Code for generating the object type indexes" "sort[headingorder]!is[image]">>
+
+Of course it would be a good solution to re-write this code using JS for embedding it into TW.  

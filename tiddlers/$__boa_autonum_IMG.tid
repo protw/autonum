@@ -1,0 +1,7 @@
+type: application/x-tiddler-dictionary
+title: $:/boa/autonum/IMG
+
+MAX_OBJ_COUNT: 3
+icon-table-of-contents.svg: 1
+RedBall: 2
+BlueBall: 3

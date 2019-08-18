@@ -1,0 +1,6 @@
+created: 20190102141443630
+modified: 20190102141524811
+title: $:/SiteTitle
+type: text/vnd.tiddlywiki
+
+{{$:/boa/title}}

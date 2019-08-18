@@ -1,0 +1,43 @@
+created: 20181230172234451
+headingorder: 030
+icon: drawsvg-digit-2.svg
+modified: 20190103114008916
+tags: [[My book (dummy example)]]
+title: TEST
+type: text/vnd.tiddlywiki
+
+\define anind(ns,objtitle)
+<$transclude tiddler=<<autonumtid $ns$>> index=$objtitle$/>. <$transclude tiddler=$objtitle$ field=caption/> 
+\end
+
+\define anlist(ns:REF)
+<$set name="tidns" value=<<autonumtid $ns$>> >
+<$list filter='[<tidns>indexes[]] -[title[MAX_OBJ_COUNT]]' variable='xyz'>
+<$transclude tiddler=<<tidns>> index=<<xyz>>/>. <$transclude tiddler=<<xyz>> field="caption"/><br/>
+</$list>
+<$set>
+\end
+
+-title[MAX_OBJ_COUNT]
+
+<<anlist FRM>>
+
+===
+
+<<anind FRM "Fibbonachi">>
+
+----
+
+<<autonumtid "REF">>
+
+~~qwerty~~
+
+{{$:/boa/autonum/REF##WS-2016}}
+
+poklasdf
+
+<$set name="ns" variable="REF">
+<$transclude tiddler=<<autonumtid ($ns$)>> index="WS-2016"/>
+</$set>
+
+<$macrocall $name="autonumtid" ns="IMG"/>

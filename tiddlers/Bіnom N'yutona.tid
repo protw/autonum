@@ -1,0 +1,10 @@
+caption: Newton binomial formula
+created: 20181212104135498
+modified: 20181230110435469
+objtype: FRM
+title: Біном Н'ютона
+type: text/vnd.tiddlywiki
+
+$$
+(a+b)^n = \sum_{k= 0}^n C^k_n a^k b^{n-k}
+$$

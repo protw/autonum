@@ -1,0 +1,65 @@
+created: 20181208194332532
+headingorder: 010
+modified: 20190102223041474
+tags: [[My book (dummy example)]]
+title: Autoref Test
+type: text/vnd.tiddlywiki
+
+//Trigger a reset --> <<autoref reset>> <-- You don't see anything. Invisible. But important <br/>
+Trigger a 2nd reset for images. --> <<autoref reset ns:IMG>> <-- The green bear is invisible
+//
+
+----
+But here I want to describe the link with it's number: 
+
+<<autonumdisp tid: "WS-2016">>
+
+Another quick reference to a different link by number: <<autonumdisp "SJ-2015">>
+
+Here I want to make a reference to a numbered link: <<autonumref "WS-2016">>
+
+Here's a helpful image to explain things:
+
+<<autonumdisp "RedBall" "IMG">>
+
+Here there is a formula:
+
+<<autonumdisp "Fibbonachi" ns : "FRM">>
+
+
+And again to <<autonumref "WS-2016">> and to <<autonumdisp "SJ-2017">>. Also see formula <<autonumref "Fibbonachi" "FRM">>
+
+Another image in case that didn't make sense:
+
+<<autonumdisp "BlueBall" "IMG">>
+
+* MAX REFS I'VE SEEN: <<autonummax REF>>
+* MAX IMAGES I'VE SEEN: <<autonummax IMG>>
+* MAX FORMULAS I'VE SEEN: <<autonummax FRM>>
+* MAX TABLES I'VE SEEN: <<autonummax TBL>>
+
+One more formula is here:
+
+<<autonumdisp tid :"Біном Н'ютона" FRM>>
+
+As well as the reference to formula <<autonumref "Біном Н'ютона" FRM>>
+
+Now I'll list what I've seen:
+
+<<<
+''References''
+
+<<autonumlist REF>>
+
+''Images Used by caption''
+
+<<autonumlist IMG>>
+
+''Formulas used by caption''
+
+<<autonumlist FRM>>
+
+''Tables used by caption''
+
+<<autonumlist TBL>>
+<<<

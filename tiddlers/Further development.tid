@@ -1,0 +1,10 @@
+created: 20190102123016922
+headingorder: 030
+modified: 20190103121958292
+tags: [[Autonum project]]
+title: Further development
+type: text/vnd.tiddlywiki
+
+In order to make code more universal, effective and user-friendly many things yet should be done, particularly:
+
+<<toc "Further development" "sort[headingorder]!is[image]">>

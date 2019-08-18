@@ -1,0 +1,52 @@
+created: 20181229225454070
+headingorder: 050
+modified: 20190102221534330
+objtype: REF IMG FRM TBL
+tags: [[Autonum project]]
+title: My book (dummy example)
+type: text/vnd.tiddlywiki
+
+That is a root tiddler for the TOC:
+
+<<toc "My book" "sort[headingorder]!is[image]">>
+
+Auxilary resources are located in `$:/boa/`:
+
+<$list filter="[prefix[$:/boa]]">
+
+</$list>
+
+An additional plugin [[GenericTagFields|https://ooktech.com/jed/ExampleWikis/GenericTagFields/]] is used here to manage with fields similarly to tags. As a result an additional field `objtype` is introduced to mark up tiddlere belonging to particular object types `TBL`, `REF`, `FRM`, `IMG`, `NOT`, `ABB`:
+
+> <$list filter='[tags:objtype[]]' variable='xyz'>
+//<<xyz>>//
+</$list>
+
+Additionally, tiddlers having a particular value (say `FRM`) in a particular field (say `objtype`) can be selected:
+
+> <$list filter='[[REF]listed[objtype]]' variable='xyz'>
+<<xyz>><br/>
+</$list>
+
+Reveal a field of the tiddler anywhere inside its text:
+
+> <<TagLikeList objtype "Dummy pattern">>
+
+Access to the Object values
+
+> Object title -- ''WS-2016''
+> Object type -- `REF`
+> Object type ref index -- ''{{$:/boa/autonum/REF##WS-2016}}''
+> Object caption -- ''{{WS-2016!!caption}}''
+
+List of index fields from the ~DataTiddler:
+
+> <$list filter='[[$:/boa/autonum/REF]indexes[]]' variable='xyz'>
+<$transclude tiddler="$:/boa/autonum/REF" index=<<xyz>>/>. <$view tiddler=<<xyz>> field="caption"/><br/>
+</$list>
+
+
+<<autonumtid>>
+
+<$macrocall $name="autonumtid">
+

@@ -1,0 +1,36 @@
+created: 20190102120327086
+headingorder: 030
+modified: 20190102134809553
+tags: [[Idea of the project]]
+title: Internal text object in wiki text
+type: text/vnd.tiddlywiki
+
+Any internal text type object is stored in a single tiddler. Its content is stored in the text field. The object description is stored in field `caption`. Field `objtype` filled in with object type name.
+
+For example, SVG image as an internal text object may have the following look:
+
+```
+title: BlueBall
+type: image/svg+xml
+caption: That is a blue ball
+objtype: IMG
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="150" height="100">
+  <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="blue" />
+</svg>
+```
+
+Formula as an internal text object may have the following look:
+
+```
+title: Біном Н'ютона
+type: text/vnd.tiddlywiki
+caption: Newton binomial formula
+objtype: FRM
+
+$$
+(a+b)^n = \sum_{k= 0}^n C^k_n a^k b^{n-k}
+$$
+```

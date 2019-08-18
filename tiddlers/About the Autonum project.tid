@@ -1,0 +1,25 @@
+created: 20181231144348273
+headingorder: 010
+modified: 20190102231411983
+tags: [[Autonum project]]
+title: About the Autonum project
+type: text/vnd.tiddlywiki
+
+Tiddlywiki (TW) is a cool thing. On its basis, if you wish, you may have an advanced note book, a complete wiki, a scientific or work journal, an address book, a directory, etc. The list can be continued on.
+
+The feature of TW, which makes it extremely attractive, is that it simultaneously satisfies two complementary requirements: autonomy (independence from any external services) and ease of publication (thanks to [[various interfaces|https://tiddlywiki.com/#GettingStarted]]).
+
+TW is not panacea to all problems. TW differs from other wikis used external servers, such as, for example, Mediawiki. In the base version, TW stores and processes all data locally using the built-in Javascript engine. As a result, TW is not intended to work with large volumes of data and, as a rule, is limited to a total of its own built-in volume of several dozens of MB.
+
+Hence, autonomy, ease of publication, a limited data volume - all this is great for preparing and publishing books. But ...
+
+
+!! Can books be created using TW?
+
+Typically, wikis do not use the internal numbering system and references of individual text objects, such as tables, formulas, biblographic references, as it accepted for scientific articles and books publishing. TW is not an exception here. This is due to the difference in the ordering of individual articles (sections) between a wiki and a book. While the latter model provides a certain order of articles (sections) in a document (data type - the list), then in the first model this order is absent (data type - the set).
+
+Therefore, the idea of ​​adapting TW to create books looks promising for both potential authors and in terms of expanding the application of the TW platform.
+
+!! Discussion
+
+The project extends a discussion taking place at the TW forum under topic [[Autonumbering|https://groups.google.com/forum/#!topic/tiddlywiki/z7iotkgKQHw%5B51-75%5D]].

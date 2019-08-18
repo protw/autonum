@@ -1,0 +1,12 @@
+created: 20190101150745320
+headingorder: 020
+modified: 20190103121822312
+tags: [[Autonum project]]
+title: Idea of the project
+type: text/vnd.tiddlywiki
+
+The whole idea of the project is to equip TW with tools for auto indexing of various types of internal objects in the text with successive referencing to them.
+
+Very roughly the overall procedure comprises the following steps:
+
+<<toc "Idea of the project" "sort[headingorder]!is[image]">>

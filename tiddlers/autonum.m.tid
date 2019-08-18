@@ -1,0 +1,36 @@
+created: 20190102202308055
+headingorder: 010
+modified: 20190102202752677
+tags: [[Code for generating the object type indexes]]
+title: autonum.m
+type: text/vnd.tiddlywiki
+
+```
+function autonum
+  clear all
+  # Global structutes
+  global DATA SEQ_NUM ANCHORS;
+  # Global constants
+  global NS_LIST MAX_OBJ_COUNT_FLD AUTONUM_TW_FOLDER;
+  NS_LIST = {'REF' 'IMG' 'FRM' 'TBL' 'NOT' 'ABB'};
+  MAX_OBJ_COUNT_FLD = 'MAX_OBJ_COUNT';
+  AUTONUM_TW_FOLDER = '$:/boa/autonum/';
+  # Non-global constants
+  tid_folder = 'D:\boa_protw\_AUTONUM\tw5node\tiddlers\';
+  root_toc_title = "My book";
+  
+  ### Init ANCHORS structure
+  init_anchor_struct;
+  ### Build TOC index for the whole TW
+  toc_index = build_toc_index(tid_folder, root_toc_title);
+  ### Build AUTONUM index for each object type for the whole TW
+  for i=toc_index
+    printf('%i [%i] (%s) %s\n', ...
+    DATA(i).heading_level, DATA(i).seq_num, ...
+    DATA(i).headingorder, DATA(i).title);
+    collect_single_tid_anchors(tid_folder, DATA(i).title);
+  endfor
+  ### Storing the result in corresponding DATATIDDLERS
+  store_obj_inds(tid_folder);
+endfunction
+```

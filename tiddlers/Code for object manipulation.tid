@@ -1,0 +1,11 @@
+created: 20190102200825198
+headingorder: 020
+modified: 20190102210201475
+tags: [[Code used]]
+title: Code for object manipulation
+type: text/vnd.tiddlywiki
+
+There are five simple macros here for object manipulation, which are located in 
+$:/boa/macro/autonum:
+
+{{$:/boa/macro/autonum}}

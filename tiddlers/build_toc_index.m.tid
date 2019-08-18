@@ -1,0 +1,94 @@
+created: 20190102202549353
+headingorder: 020
+modified: 20190102202728042
+tags: [[Code for generating the object type indexes]]
+title: build_toc_index.m
+type: text/vnd.tiddlywiki
+
+```
+function toc_index = build_toc_index(tid_folder, root_toc_title)
+  global DATA;
+  
+  get_tid_data(tid_folder);
+  ind = init_build_toc(root_toc_title);
+  build_toc(DATA(ind).title, DATA(ind).heading_level);
+
+  a = {DATA.seq_num};
+  for i = 1:length(a)
+    ix(i) = !isempty(a{i});
+  endfor
+  toc_index = find(ix);
+  [~, inds] = sort([DATA(toc_index).seq_num]);
+  toc_index = toc_index(inds);
+endfunction
+
+function build_toc(title, heading_level)
+  global DATA SEQ_NUM;
+  ind = get_title_index(title);
+  ix = [];
+  for i = 1:length(DATA)
+    ind = find(strcmp(DATA(i).tags, title));
+    if (!isempty(ind) && !isempty(DATA(i).headingorder))
+      ix = [ix i];
+    endif
+  endfor
+  if (isempty(ix))
+    return
+  endif
+  s_headingorder = [];
+  for i = 1:length(ix)
+    s_headingorder = [s_headingorder; 1*DATA(ix(i)).headingorder];
+  endfor
+  [~, ixs] = sortrows(s_headingorder,[1 2 3]);
+  ++heading_level;
+  for i = 1:length(ix)
+    j = ix(ixs(i));
+    DATA(j).heading_level = heading_level;
+    DATA(j).seq_num = ++SEQ_NUM;
+    build_toc(DATA(j).title, heading_level);
+  endfor
+endfunction
+
+function ind = init_build_toc(root_toc_title)
+  global DATA SEQ_NUM;
+  ind = get_title_index(root_toc_title);
+  DATA(ind).heading_level = 1;
+  SEQ_NUM = 1;
+  DATA(ind).seq_num = SEQ_NUM;
+endfunction
+
+function get_tid_data(tid_folder)
+  global DATA;
+  f = dir([tid_folder '*.tid']);
+  for i = 1:length(f)
+    fid = fopen([f(i).folder '\' f(i).name], 'r');
+    txt = fread(fid,inf,'uchar')';
+    fclose(fid);
+    [s, e] = regexp(char(txt), '\r*\n\r*\n');
+    header = char(txt(1:s(1)));
+    t = regexp(header, '^([^:]+):\s([^\n]*)$', 'tokens', 'lineanchors');
+    for j = 1:length(t)
+      DATA(i).(t{j}{1}) = t{j}{2};
+    endfor
+    if(isfield(DATA(i),'tags'))
+      DATA(i).tags = tags2cell (char(DATA(i).tags));
+    endif
+  endfor
+endfunction
+
+function indx = get_title_index(title)
+  global DATA;
+  indx = find(strcmp({DATA(:).title}, title));
+  return;
+endfunction
+
+function tags = tags2cell (x)
+  tags1 = regexp(x, '\[\[([^\]]+)\]\]', 'tokens');
+  [s,e] = regexp(x, '(\[\[[^\]]+\]\])');
+  for i = length(s):-1:1
+    x(s(i):e(i)) = [];
+  endfor
+  tags2 = regexp(x, '([^\s]+)', 'tokens');
+  tags = [tags1{:} tags2{:}];
+endfunction
+```

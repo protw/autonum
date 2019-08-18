@@ -1,0 +1,31 @@
+created: 20190102120558023
+headingorder: 040
+modified: 20190102120639594
+tags: [[Idea of the project]]
+title: Storing the object type indexes
+type: text/vnd.tiddlywiki
+
+Each object type index is stored into a corresponding shadow tiddler. Its title is formed from two parts:
+
+* prefix, for instance, `$:/boa/autonum/` and
+* object type name, for instance, `IMG` for images
+
+The tiddler itself is of the ''~DataTiddler'' type, namely, [[DictionaryTiddlers|https://tiddlywiki.com/#DictionaryTiddlers]]. Each index record in this tiddler is formed by:
+
+* a particular internal text object title followed with colon without space,
+* internal text object index.
+
+As an example index tiddler for bibligraphical references may have the following look:
+
+```
+title: $:/boa/autonum/REF
+type: application/x-tiddler-dictionary
+
+MAX_OBJ_COUNT: 4
+JS-1492: 1
+WS-2016: 2
+SJ-2015: 3
+SJ-2017: 4
+```
+
+`MAX_OBJ_COUNT` is a special term reserved for storing the total number of objects of a given type. Thus this term cannot be used for object naming.

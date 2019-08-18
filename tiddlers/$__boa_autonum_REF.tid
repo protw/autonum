@@ -1,0 +1,8 @@
+type: application/x-tiddler-dictionary
+title: $:/boa/autonum/REF
+
+MAX_OBJ_COUNT: 4
+JS-1492: 1
+WS-2016: 2
+SJ-2015: 3
+SJ-2017: 4

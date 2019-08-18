@@ -1,0 +1,10 @@
+created: 20190103121245830
+headingorder: 020
+modified: 20190103121641594
+tags: [[Further development]]
+title: Alternative TOC
+type: text/vnd.tiddlywiki
+
+The current "classical" [[TOC macros|https://tiddlywiki.com/#%24%3A%2Fcore%2Fmacros%2Ftoc]] seems a bit awkward for building the TOC index (see [[Generating the TOC index]]). Instead, the drag-and-drop mechanism recently extended for lists (see  [[list-links-draggable macro|https://tiddlywiki.com/#list-links-draggable%20Macro]]) looks much more suitable for hierarchical TOC interactive building and therefore could be used for ''TOC index'' building with much more ease.
+
+It would be great if somebody from the TW community would challenge the development of this alternative TOC tool.

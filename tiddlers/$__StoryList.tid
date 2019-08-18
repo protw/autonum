@@ -1,0 +1,6 @@
+created: 20190622200934018
+list: [[About the Autonum project]] [[Idea of the project]] [[Generating the TOC index]] [[Generating the object type indexes]] [[Internal text object in wiki text]] [[Storing the object type indexes]] [[Object manipulation]] [[Further development]] [[Code re-writing]] [[Alternative TOC]] [[Heading autonumeration]] [[Popup window]] [[Code used]] [[Code for generating the object type indexes]] autonum.m build_toc_index.m collect_single_tid_anchors.m init_anchor_struct.m store_obj_inds.m [[Code for object manipulation]] [[My book (dummy example)]] [[Another tiddler]] [[Tiddler with table]] [[Autoref Test]] TEST [[Біном Н'ютона]] BlueBall Fibbonachi JS-1492 RedBall SJ-2015 SJ-2017 WS-2016
+modified: 20190622200934018
+title: $:/StoryList
+type: text/vnd.tiddlywiki
+

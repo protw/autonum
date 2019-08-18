@@ -1,0 +1,15 @@
+created: 20190102205309338
+headingorder: 040
+modified: 20190102205404496
+tags: [[Code for generating the object type indexes]]
+title: init_anchor_struct.m
+type: text/vnd.tiddlywiki
+
+```
+function init_anchor_struct
+  global ANCHORS NS_LIST;
+  for i = 1:length(NS_LIST)
+    ANCHORS.(NS_LIST{i}).MAX_OBJ_COUNT = 0;
+  endfor
+endfunction
+```

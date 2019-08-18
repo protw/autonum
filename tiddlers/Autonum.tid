@@ -1,0 +1,20 @@
+created: 20171118081832530
+list: 
+modified: 20190103143050468
+pub-author-date: 2019
+pub-authors: Olegh Bondarenko
+pub-by: protw
+pub-date: 20190103
+pub-desc: This open project aims to ​​adapt Tiddlywiki for creation books of academic style of numbering and referencing of internal text objects. This idea looks promising for both potential authors and in terms of expanding the application of the Tiddlywiki platform. The idea of the project was inspired by discussion held at Tiddlywiki forum and contribution of Mark S., Danielo Rodriguez, Thomas Elmiger, Mohammad, Olegh Bondarenko, and others. The project is not complete yet, so anyone can join it.
+pub-desc-short: Developing tools for autonumbering and referencing text objects in the Tiddlywiki environment
+pub-img: Autonum.svg
+pub-index: 007
+pub-lang: eng
+pub-link: https://protw.github.io/autonum/
+pub-title: Autonum
+pub-trans-by: Olegh Bondarenko
+tags: Портфоліо
+title: Autonum
+type: text/vnd.tiddlywiki
+
+{{||$:/boa/template/doc-ref}}
