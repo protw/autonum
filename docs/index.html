@@ -327,10 +327,10 @@ Quick-TW-table: 1
 <div _canonical_uri="./images/%2524%253A%252Fboa%252Fimg%252Fprotw-logo.svg" created="20190102142308082" modified="20190102142326899" title="$:/boa/img/protw-logo.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div created="20190816132157278" modified="20190816185900623" tags="Tiddlywiki" title="$:/boa/logo" type="image/svg+xml" wiki-address="https://protw.github.com/autonum" wiki-caption="Project dedicated to text object autonumbering and referencing" wiki-created="20190103123030000" wiki-modified="20190816215730000" wiki-name="Autonumbering" wiki-order="130" revision="0" bag="default">
+<div created="20190816132157278" modified="20190818110807469" tags="Tiddlywiki" title="$:/boa/logo" type="image/svg+xml" wiki-address="https://protw.github.io/autonum" wiki-caption="Project dedicated to text object autonumbering and referencing" wiki-created="20190103123030000" wiki-github="https://github.com/protw/autonum" wiki-modified="20190816215730000" wiki-name="Autonumbering" wiki-order="130" revision="0" bag="default">
 <pre>&lt;svg id=&quot;Layer_1&quot; data-name=&quot;Layer 1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 40 40&quot;&gt;&lt;defs&gt;&lt;style&gt;.cls-1{fill:#fff;}.cls-2{fill:#03529a;}&lt;/style&gt;&lt;/defs&gt;&lt;title&gt;ISSA Icons 40px&lt;/title&gt;&lt;rect class=&quot;cls-1&quot; x=&quot;2.91&quot; y=&quot;1.9&quot; width=&quot;34.18&quot; height=&quot;36.19&quot;/&gt;&lt;path class=&quot;cls-2&quot; d=&quot;M37.09,39.1H2.91a1,1,0,0,1-1-1V1.9a1,1,0,0,1,1-1H37.09a1,1,0,0,1,1,1V38.1A1,1,0,0,1,37.09,39.1Zm-33.18-2H36.09V2.9H3.91V37.1Z&quot;/&gt;&lt;path class=&quot;cls-2&quot; d=&quot;M31.51,10.56H19a1,1,0,1,1,0-2H31.51A1,1,0,1,1,31.51,10.56Z&quot;/&gt;&lt;path class=&quot;cls-2&quot; d=&quot;M31.51,16.13H19a1,1,0,0,1,0-2H31.51A1,1,0,0,1,31.51,16.13Z&quot;/&gt;&lt;path class=&quot;cls-2&quot; d=&quot;M31.51,21.7H19a1,1,0,0,1,0-2H31.51A1,1,0,0,1,31.51,21.7Z&quot;/&gt;&lt;path class=&quot;cls-2&quot; d=&quot;M31.51,27.26H19a1,1,0,0,1,0-2H31.51A1,1,0,0,1,31.51,27.26Z&quot;/&gt;&lt;path class=&quot;cls-2&quot; d=&quot;M27.32,32.83H19a1,1,0,0,1,0-2h8.37A1,1,0,1,1,27.32,32.83Z&quot;/&gt;&lt;path class=&quot;cls-2&quot; d=&quot;M14.07,14H8.49a1,1,0,0,1-1-1V7.47a1,1,0,0,1,1-1h5.58a1,1,0,0,1,1,1V13A1,1,0,0,1,14.07,14ZM9.49,12h3.58V8.47H9.49V12Z&quot;/&gt;&lt;path class=&quot;cls-2&quot; d=&quot;M14.07,23.78H8.49a1,1,0,0,1-1-1V17.22a1,1,0,0,1,1-1h5.58a1,1,0,0,1,1,1v5.57A1,1,0,0,1,14.07,23.78Zm-4.58-2h3.58V18.22H9.49v3.57Z&quot;/&gt;&lt;path class=&quot;cls-2&quot; d=&quot;M14.07,33.53H8.49a1,1,0,0,1-1-1V27a1,1,0,0,1,1-1h5.58a1,1,0,0,1,1,1v5.57A1,1,0,0,1,14.07,33.53Zm-4.58-2h3.58V28H9.49v3.57Z&quot;/&gt;&lt;/svg&gt;</pre>
 </div>
-<div created="20190716071226253" modified="20190816184812642" tags="" title="$:/boa/logo-edit" revision="0" bag="default">
+<div created="20190716071226253" modified="20190818101211303" tags="" title="$:/boa/logo-edit" revision="0" bag="default">
 <pre>\define edit-logo-field(tid,lbl,fld,descr)
 &lt;div class=&quot;boa-edit-width&quot;&gt;
 &lt;div class=&quot;boa-label&quot;&gt;$lbl$&lt;/div&gt;
@@ -354,7 +354,7 @@ Quick-TW-table: 1
   .boa-table-comment { color: lightgrey; font-size: 95%; line-height: 100%; padding: 5px 5px 10px; width: 350px; }
 &lt;/style&gt;
 
-!! Редагування загальних параметрів вікі
+!! Загальні параметри вікі
 
 &lt;&lt;edit-logo-field
   tid:&quot;$:/boa/logo&quot; 
@@ -384,27 +384,34 @@ Quick-TW-table: 1
   descr:&quot;За цим параметром сортується список вікі&quot;
 &gt;&gt;
 
-!! Перегляд інших загальних параметрів вікі
+!! Розташування вікі
 
-&lt;&lt;show-logo-field
+&lt;&lt;edit-logo-field
   tid:&quot;$:/boa/logo&quot; 
   lbl:&quot;Веб-адреса вікі&quot; 
   fld:&quot;wiki-address&quot; 
-  descr:&quot;Повна веб-адреса вікі визначена у параметрах `wiki_domain` і `wiki_name` конфігураційного файлу `tw_build_conf.json`&quot;
+  descr:&quot;Повна веб-адреса опублікованої вікі визначена у параметрах `wiki_domain` і `wiki_name` з конфігураційного файлу `tw_build_conf.json`&quot;
 &gt;&gt;
 
-&lt;&lt;show-logo-field
+&lt;&lt;edit-logo-field
+  tid:&quot;$:/boa/logo&quot; 
+  lbl:&quot;//Github// репо вікі&quot; 
+  fld:&quot;wiki-github&quot; 
+  descr:&quot;Повна веб-адреса Github репозитарію (багатофайловий вихідний текст вікі у форматі Node.js) складається з двох частин `github_main` і `wiki_name` з конфігураційного файлу `tw_build_conf.json`&quot;
+&gt;&gt;
+
+&lt;&lt;edit-logo-field
   tid:&quot;$:/boa/logo&quot; 
   lbl:&quot;Дата створення вікі&quot; 
   fld:&quot;wiki-created&quot; 
-  descr:&quot;Формат дати: yyyymmddHHMMSSFFF, де //yyyy// - рік, //mm// - місяць, //dd// - день місяця, //HH// - годин, //MM// - хвилин, //SS// - секунд, //FFF// - мікросекунд&quot;
+  descr:&quot;Формат дати: `yyyymmddHHMMSSFFF`, де `yyyy` - рік, `mm` - місяць, `dd` - день місяця, `HH` - годин, `MM` - хвилин, `SS` - секунд, `FFF` - мікросекунд&quot;
 &gt;&gt;
 
-&lt;&lt;show-logo-field
+&lt;&lt;edit-logo-field
   tid:&quot;$:/boa/logo&quot; 
   lbl:&quot;Дата модифікації вікі&quot; 
   fld:&quot;wiki-modified&quot; 
-  descr:&quot;&quot;
+  descr:&quot;Формат аналогічний до //Дата створення вікі//&quot;
 &gt;&gt;
 </pre>
 </div>
@@ -468,13 +475,13 @@ Table &lt;$transclude tiddler=&lt;&lt;autonumtid $ns$&gt;&gt; index=&quot;$tid$&
 
 &lt;pre&gt;&lt;$view/&gt;&lt;/pre&gt;</pre>
 </div>
-<div created="20170104195303693" modified="20190817074104347" tags="" title="$:/boa/subtitle" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div created="20170104195303693" modified="20190818095909977" tags="" title="$:/boa/subtitle" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>\define res_link(link, tooltip, image)
 &lt;a href=&quot;$link$&quot; title=&quot;$tooltip$&quot; target=&quot;_blank&quot;&gt;&lt;div style=&quot;margin:4px 4px; text-align:center;float:left;&quot;&gt;[img height=28px [$image$]]&lt;/div&gt;&lt;/a&gt;
 \end
 
-\define feedback-link(wiki-address, wiki-name, feedback-icon)
-&lt;a href=&quot;$wiki-address$/issues&quot; title=&quot;Feedback on the '$wiki-name$' project via Github&quot; target=&quot;_blank&quot;&gt;&lt;div style=&quot;margin:4px 4px; text-align:center;float:left;&quot;&gt;[img height=28px [$feedback-icon$]]&lt;/div&gt;&lt;/a&gt;
+\define feedback-link(wiki-github, wiki-name, feedback-icon)
+&lt;a href=&quot;$wiki-github$/issues/new&quot; title=&quot;Feedback on the '$wiki-name$' project via Github&quot; target=&quot;_blank&quot;&gt;&lt;div style=&quot;margin:4px 4px; text-align:center;float:left;&quot;&gt;[img height=28px [$feedback-icon$]]&lt;/div&gt;&lt;/a&gt;
 \end
 
 &lt;div style=&quot;clear:both;&quot;/&gt;
@@ -484,7 +491,7 @@ Table &lt;$transclude tiddler=&lt;&lt;autonumtid $ns$&gt;&gt; index=&quot;$tid$&
     &quot;$:/boa/img/protw-logo.svg&quot;
 &gt;&gt;
 &lt;$macrocall $name=&quot;feedback-link&quot; 
-    wiki-address={{$:/boa/logo!!wiki-address}} 
+    wiki-github={{$:/boa/logo!!wiki-github}} 
     wiki-name={{$:/boa/logo!!wiki-name}}
     feedback-icon=&quot;$:/boa/img/github-logo.svg&quot;
 /&gt;
@@ -508,9 +515,9 @@ Table &lt;$transclude tiddler=&lt;&lt;autonumtid $ns$&gt;&gt; index=&quot;$tid$&
 
 {{!!pub-desc}}</pre>
 </div>
-<div created="20181205073534349" modified="20190816191133014" tags="" title="$:/boa/title" type="text/vnd.tiddlywiki" revision="0" bag="default">
-<pre>&lt;a href={{$:/boa/logo!!web}} title={{$:/boa/logo!!caption}}&gt;[img width=205px [$:/boa/logo]]&lt;/a&gt;&lt;br/&gt;
-&lt;div style=&quot;width:205px;font-size:24pt;line-height:24pt;margin-bottom:10px;padding-left:5px;&quot;&gt;@@font-size:30pt; AUTO//''NUM''//@@&lt;/div&gt;
+<div created="20181205073534349" modified="20190818111139939" tags="" title="$:/boa/title" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>&lt;a href={{$:/boa/logo!!wiki-address}} title={{$:/boa/logo!!wiki-caption}}&gt;[img width=205px [$:/boa/logo]]&lt;/a&gt;&lt;br/&gt;
+&lt;div style=&quot;width:205px;line-height:22pt;margin-bottom:10px;padding-left:5px;&quot;&gt;@@font-size:28pt; AUTO//''NUM''//@@&lt;/div&gt;
 &lt;!--&lt;div style=&quot;width:205px;font-size:12pt;line-height:14pt;margin-bottom:10px;padding-left:5px;&quot;&gt;{{$:/boa/logo!!caption}}&lt;/div&gt;--&gt;</pre>
 </div>
 <div created="20190101145824153" modified="20190101145825822" title="$:/config/DefaultMoreSidebarTab" type="text/vnd.tiddlywiki" revision="0" bag="default">

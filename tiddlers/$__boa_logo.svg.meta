@@ -1,11 +1,12 @@
 created: 20190816132157278
-modified: 20190816185900623
+modified: 20190818110807469
 tags: Tiddlywiki
 title: $:/boa/logo
 type: image/svg+xml
-wiki-address: https://protw.github.com/autonum
+wiki-address: https://protw.github.io/autonum
 wiki-caption: Project dedicated to text object autonumbering and referencing
 wiki-created: 20190103123030000
+wiki-github: https://github.com/protw/autonum
 wiki-modified: 20190816215730000
 wiki-name: Autonumbering
 wiki-order: 130
