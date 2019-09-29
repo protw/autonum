@@ -41,3 +41,4 @@ poklasdf
 </$set>
 
 <$macrocall $name="autonumtid" ns="IMG"/>
+
