@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour apprev="17950" appversion="6.1.6" start="node16">
+  <panorama id="node1">
+    <input leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0.572338" width="1440" leveltilesize="510" levelbiashidpi="1.000" height="1440" overlap="1" levelbias="0.400" levelingroll="-0.48037">
+      <level predecode="0" width="1440" preload="0" height="1440"/>
+      <level predecode="0" width="720" preload="0" height="720"/>
+      <level predecode="1" width="360" preload="1" height="360"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="74.82" tilt="-2.18" projection="4" pan="4.4"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovstereographic="270" tilt="90" fovfisheye="360" pan="360" scaletofit="1"/>
+    </view>
+    <userdata source="" tags="200803 фото 360" nodeid="node1" heading="0" title="DCIM\100GOPRO\GS__0802.JPG" description="" info="" copyright="" latitude="" author="" datetime="03.08.2020 15:30" customnodeid="" longitude="" comment=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label border="1" width="180" borderalpha="1" textalpha="1" enabled="1" wordwrap="1" background="1" textcolor="0x000000" backgroundalpha="1" height="20" borderradius="1" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle borderalpha="1" handcursor="1" backgroundalpha="0.25098" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot skinid="ht_node" target="-74.7/5.9/120.0" tilt="-7.17" title="Кімната з тренажером" description="" id="Point01" pan="-219.92" url="{node3}"/>
+    </hotspots>
+    <media/>
+    <transition blendcolor="0x000000" zoomout="0" zoomoutpause="1" enabled="1" type="crossdissolve" blendtime="2" softedge="10" zoomspeed="2" zoomin="0" zoomfov="20"/>
+    <autorotate nodedelay="0.00" enabled="1" useanimation="0" speed="0.300" noderandom="1" delay="7.00" nodefilter="" returntohorizon="0.000" startloaded="0"/>
+    <flyintransition enabled="1" speed="2.00"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboardzoom="0" lockedwheel="0" invertwheel="0" speedwheel="1" dblclickfullscreen="0" sensitivity="8" rubberband="0" contextprojections="0" invertcontrol="1" lockedkeyboard="0" hideabout="0" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node2">
+    <input leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="1.13157" width="1440" leveltilesize="510" levelbiashidpi="1.000" height="1440" overlap="1" levelbias="0.400" levelingroll="-0.842382">
+      <level predecode="0" width="1440" preload="0" height="1440"/>
+      <level predecode="0" width="720" preload="0" height="720"/>
+      <level predecode="1" width="360" preload="1" height="360"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="74.82" tilt="-3.94" projection="4" pan="-140.52"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovstereographic="270" tilt="90" fovfisheye="360" pan="360" scaletofit="1"/>
+    </view>
+    <userdata source="" tags="200803 фото 360" nodeid="node2" heading="0" title="DCIM\100GOPRO\GS__0803.JPG" description="" info="" copyright="" latitude="" author="" datetime="03.08.2020 15:33" customnodeid="" longitude="" comment=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label border="1" width="180" borderalpha="1" textalpha="1" enabled="1" wordwrap="1" background="1" textcolor="0x000000" backgroundalpha="1" height="20" borderradius="1" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle borderalpha="1" handcursor="1" backgroundalpha="0.25098" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot skinid="ht_node" target="-74.7/5.9/120.0" tilt="-11.1" title="Кімната з тренажером" description="" id="Point01" pan="-115.59" url="{node3}"/>
+    </hotspots>
+    <media/>
+    <transition blendcolor="0x000000" zoomout="0" zoomoutpause="1" enabled="1" type="crossdissolve" blendtime="2" softedge="10" zoomspeed="2" zoomin="0" zoomfov="20"/>
+    <autorotate nodedelay="0.00" enabled="1" useanimation="0" speed="0.300" noderandom="1" delay="7.00" nodefilter="" returntohorizon="0.000" startloaded="0"/>
+    <flyintransition enabled="1" speed="2.00"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboardzoom="0" lockedwheel="0" invertwheel="0" speedwheel="1" dblclickfullscreen="0" sensitivity="8" rubberband="0" contextprojections="0" invertcontrol="1" lockedkeyboard="0" hideabout="0" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node3">
+    <input leveltileurl="tiles/node3/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0" width="1440" leveltilesize="510" levelbiashidpi="1.000" height="1440" overlap="1" levelbias="0.400" levelingroll="0">
+      <level predecode="0" width="1440" preload="0" height="1440"/>
+      <level predecode="0" width="720" preload="0" height="720"/>
+      <level predecode="1" width="360" preload="1" height="360"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="120" tilt="5.93" projection="4" pan="-74.72"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovstereographic="270" tilt="90" fovfisheye="360" pan="360" scaletofit="1"/>
+    </view>
+    <userdata source="" tags="200803 фото 360" nodeid="node3" heading="0" title="DCIM\100GOPRO\GS__0804.JPG" description="" info="" copyright="" latitude="" author="" datetime="03.08.2020 15:35" customnodeid="" longitude="" comment=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label border="1" width="180" borderalpha="1" textalpha="1" enabled="1" wordwrap="1" background="1" textcolor="0x000000" backgroundalpha="1" height="20" borderradius="1" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle borderalpha="1" handcursor="1" backgroundalpha="0.25098" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot skinid="ht_node" target="4.4/-2.2/74.8" tilt="-8.88" title="Навчальна аудиторія" description="" id="Point01" pan="-212.36" url="{node1}"/>
+      <hotspot skinid="ht_node" target="-140.5/-3.9/74.8" tilt="-3.56" title="Адміністративна кімната" description="" id="Point02" pan="-243.51" url="{node2}"/>
+      <hotspot skinid="ht_node" target="157.8/3.5/46.5" tilt="-2.12" title="Вхід до тренажеру" description="" id="Point03" pan="-270.27" url="{node18}"/>
+      <hotspot skinid="ht_node" target="-2.7/3.1/120.0" tilt="-19.66" title="Тренажер" description="" id="Point04" pan="-331.96" url="{node6}"/>
+      <hotspot skinid="ht_node" target="175.8/-4.2/120.0" tilt="23.43" title="Дах тренажеру" description="" id="Point05" pan="-323.82" url="{node13}"/>
+      <hotspot skinid="ht_node" target="-176.2/0.0/120.0" tilt="-15.63" title="Ніс тренажеру" description="" id="Point06" pan="-62.94" url="{node15}"/>
+    </hotspots>
+    <media/>
+    <transition blendcolor="0x000000" zoomout="0" zoomoutpause="1" enabled="1" type="crossdissolve" blendtime="2" softedge="10" zoomspeed="2" zoomin="0" zoomfov="20"/>
+    <autorotate nodedelay="0.00" enabled="1" useanimation="0" speed="0.300" noderandom="1" delay="7.00" nodefilter="" returntohorizon="0.000" startloaded="0"/>
+    <flyintransition enabled="1" speed="2.00"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboardzoom="0" lockedwheel="0" invertwheel="0" speedwheel="1" dblclickfullscreen="0" sensitivity="8" rubberband="0" contextprojections="0" invertcontrol="1" lockedkeyboard="0" hideabout="0" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node6">
+    <input leveltileurl="tiles/node6/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0" width="1440" leveltilesize="510" levelbiashidpi="1.000" height="1440" overlap="1" levelbias="0.400" levelingroll="0">
+      <level predecode="0" width="1440" preload="0" height="1440"/>
+      <level predecode="0" width="720" preload="0" height="720"/>
+      <level predecode="1" width="360" preload="1" height="360"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="120" tilt="3.33" projection="4" pan="-0.25"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovstereographic="270" tilt="90" fovfisheye="360" pan="360" scaletofit="1"/>
+    </view>
+    <userdata source="" tags="200803 фото 360" nodeid="node6" heading="0" title="DCIM\100GOPRO\GS__0807.JPG" description="" info="" copyright="" latitude="" author="" datetime="03.08.2020 15:39" customnodeid="" longitude="" comment=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label border="1" width="180" borderalpha="1" textalpha="1" enabled="1" wordwrap="1" background="1" textcolor="0x000000" backgroundalpha="1" height="20" borderradius="1" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle borderalpha="1" handcursor="1" backgroundalpha="0.25098" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot skinid="ht_node" target="-176.2/0.0/120.0" tilt="-5.36" title="Ніс тренажеру" description="" id="Point01" pan="-1.88" url="{node15}"/>
+      <hotspot skinid="ht_node" target="-74.7/5.9/120.0" tilt="-11.42" title="Кімната з тренажером" description="" id="Point02" pan="-182.94" url="{node3}"/>
+      <hotspot skinid="ht_node" target="175.7/-1.1/120.0" tilt="24.16" title="Дах тренажеру" description="" id="Point03" pan="-182.58" url="{node13}"/>
+    </hotspots>
+    <media/>
+    <transition blendcolor="0x000000" zoomout="0" zoomoutpause="1" enabled="1" type="crossdissolve" blendtime="2" softedge="10" zoomspeed="2" zoomin="0" zoomfov="20"/>
+    <autorotate nodedelay="0.00" enabled="1" useanimation="0" speed="0.300" noderandom="1" delay="7.00" nodefilter="" returntohorizon="0.000" startloaded="0"/>
+    <flyintransition enabled="1" speed="2.00"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboardzoom="0" lockedwheel="0" invertwheel="0" speedwheel="1" dblclickfullscreen="0" sensitivity="8" rubberband="0" contextprojections="0" invertcontrol="1" lockedkeyboard="0" hideabout="0" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node13">
+    <input leveltileurl="tiles/node13/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0.668666" width="1440" leveltilesize="510" levelbiashidpi="1.000" height="1440" overlap="1" levelbias="0.400" levelingroll="-1.13577">
+      <level predecode="0" width="1440" preload="0" height="1440"/>
+      <level predecode="0" width="720" preload="0" height="720"/>
+      <level predecode="1" width="360" preload="1" height="360"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="120" tilt="0" projection="4" pan="178.47"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovstereographic="270" tilt="90" fovfisheye="360" pan="360" scaletofit="1"/>
+    </view>
+    <userdata source="" tags="200803 фото 360" nodeid="node13" heading="0" title="DCIM\100GOPRO\GS__0814.JPG" description="" info="" copyright="" latitude="" author="" datetime="03.08.2020 15:47" customnodeid="" longitude="" comment=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label border="1" width="180" borderalpha="1" textalpha="1" enabled="1" wordwrap="1" background="1" textcolor="0x000000" backgroundalpha="1" height="20" borderradius="1" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle borderalpha="1" handcursor="1" backgroundalpha="0.25098" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot skinid="ht_node" target="-176.2/0.0/120.0" tilt="-27.27" title="Ніс тренажеру" description="" id="Point01" pan="-182.48" url="{node15}"/>
+      <hotspot skinid="ht_node" target="4.4/-2.2/74.8" tilt="-20.62" title="Навчальна аудиторія" description="" id="Point02" pan="-286.97" url="{node1}"/>
+      <hotspot skinid="ht_node" target="-140.5/-3.9/74.8" tilt="-13.2" title="Адміністративна кімната" description="" id="Point03" pan="-322.35" url="{node2}"/>
+      <hotspot skinid="ht_node" target="157.8/3.5/46.5" tilt="-13.47" title="Вхід до тренажеру" description="" id="Point04" pan="-344.82" url="{node18}"/>
+    </hotspots>
+    <media/>
+    <transition blendcolor="0x000000" zoomout="0" zoomoutpause="1" enabled="1" type="crossdissolve" blendtime="2" softedge="10" zoomspeed="2" zoomin="0" zoomfov="20"/>
+    <autorotate nodedelay="0.00" enabled="1" useanimation="0" speed="0.300" noderandom="1" delay="7.00" nodefilter="" returntohorizon="0.000" startloaded="0"/>
+    <flyintransition enabled="1" speed="2.00"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboardzoom="0" lockedwheel="0" invertwheel="0" speedwheel="1" dblclickfullscreen="0" sensitivity="8" rubberband="0" contextprojections="0" invertcontrol="1" lockedkeyboard="0" hideabout="0" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node15">
+    <input leveltileurl="tiles/node15/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0.636138" width="1440" leveltilesize="510" levelbiashidpi="1.000" height="1440" overlap="1" levelbias="0.400" levelingroll="-0.950455">
+      <level predecode="0" width="1440" preload="0" height="1440"/>
+      <level predecode="0" width="720" preload="0" height="720"/>
+      <level predecode="1" width="360" preload="1" height="360"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="120" tilt="0" projection="4" pan="-176.16"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovstereographic="270" tilt="90" fovfisheye="360" pan="360" scaletofit="1"/>
+    </view>
+    <userdata source="" tags="200803 фото 360" nodeid="node15" heading="0" title="DCIM\100GOPRO\GS__0816.JPG" description="" info="" copyright="" latitude="" author="" datetime="03.08.2020 15:56" customnodeid="" longitude="" comment=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label border="1" width="180" borderalpha="1" textalpha="1" enabled="1" wordwrap="1" background="1" textcolor="0x000000" backgroundalpha="1" height="20" borderradius="1" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle borderalpha="1" handcursor="1" backgroundalpha="0.25098" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot skinid="ht_node" target="-0.3/3.3/120.0" tilt="-4.35" title="Тренажер" description="" id="Point01" pan="-175.93" url="{node6}"/>
+      <hotspot skinid="ht_node" target="-74.7/5.9/120.0" tilt="-10.98" title="Кімната з тренажером" description="" id="Point02" pan="-142.53" url="{node3}"/>
+      <hotspot skinid="ht_node" target="176.0/-0.0/120.0" tilt="12.4" title="Дах тренажеру" description="" id="Point03" pan="-176.46" url="{node13}"/>
+    </hotspots>
+    <media/>
+    <transition blendcolor="0x000000" zoomout="0" zoomoutpause="1" enabled="1" type="crossdissolve" blendtime="2" softedge="10" zoomspeed="2" zoomin="0" zoomfov="20"/>
+    <autorotate nodedelay="0.00" enabled="1" useanimation="0" speed="0.300" noderandom="1" delay="7.00" nodefilter="" returntohorizon="0.000" startloaded="0"/>
+    <flyintransition enabled="1" speed="2.00"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboardzoom="0" lockedwheel="0" invertwheel="0" speedwheel="1" dblclickfullscreen="0" sensitivity="8" rubberband="0" contextprojections="0" invertcontrol="1" lockedkeyboard="0" hideabout="0" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node16">
+    <input leveltileurl="tiles/node16/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0" width="1440" leveltilesize="510" levelbiashidpi="1.000" height="1440" overlap="1" levelbias="0.400" levelingroll="0">
+      <level predecode="0" width="1440" preload="0" height="1440"/>
+      <level predecode="0" width="720" preload="0" height="720"/>
+      <level predecode="1" width="360" preload="1" height="360"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="48.68" tilt="5.35" projection="4" pan="-20.17"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovstereographic="270" tilt="90" fovfisheye="360" pan="360" scaletofit="1"/>
+    </view>
+    <userdata source="" tags="200803 фото 360" nodeid="node16" heading="0" title="DCIM\100GOPRO\GS__0817.JPG" description="" info="" altitude="189.55" copyright="" latitude="50.437081" author="" datetime="03.08.2020 16:01" customnodeid="" longitude="30.431973" comment=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label border="1" width="180" borderalpha="1" textalpha="1" enabled="1" wordwrap="1" background="1" textcolor="0x000000" backgroundalpha="1" height="20" borderradius="1" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle borderalpha="1" handcursor="1" backgroundalpha="0.25098" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot skinid="ht_node" target="157.8/3.5/46.5" tilt="-3.26" title="Вхід до тренажеру" description="" id="Point01" pan="-22.13" distance="16.3333" url="{node18}"/>
+    </hotspots>
+    <media/>
+    <transition blendcolor="0x000000" zoomout="0" zoomoutpause="1" enabled="1" type="crossdissolve" blendtime="2" softedge="10" zoomspeed="2" zoomin="0" zoomfov="20"/>
+    <autorotate nodedelay="0.00" enabled="1" useanimation="0" speed="0.300" noderandom="1" delay="7.00" nodefilter="" returntohorizon="0.000" startloaded="0"/>
+    <flyintransition enabled="1" speed="2.00"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboardzoom="0" lockedwheel="0" invertwheel="0" speedwheel="1" dblclickfullscreen="0" sensitivity="8" rubberband="0" contextprojections="0" invertcontrol="1" lockedkeyboard="0" hideabout="0" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node18">
+    <input leveltileurl="tiles/node18/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0.956117" width="1440" leveltilesize="510" levelbiashidpi="1.000" height="1440" overlap="1" levelbias="0.400" levelingroll="-2.19552">
+      <level predecode="0" width="1440" preload="0" height="1440"/>
+      <level predecode="0" width="720" preload="0" height="720"/>
+      <level predecode="1" width="360" preload="1" height="360"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="46.46" tilt="3.51" projection="4" pan="157.82"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovstereographic="270" tilt="90" fovfisheye="360" pan="360" scaletofit="1"/>
+    </view>
+    <userdata source="" tags="200803 фото 360" nodeid="node18" heading="0" title="DCIM\100GOPRO\GS__0819.JPG" description="" info="" altitude="190.88" copyright="" latitude="50.436974" author="" datetime="03.08.2020 16:02" customnodeid="" longitude="30.431815" comment=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label border="1" width="180" borderalpha="1" textalpha="1" enabled="1" wordwrap="1" background="1" textcolor="0x000000" backgroundalpha="1" height="20" borderradius="1" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle borderalpha="1" handcursor="1" backgroundalpha="0.25098" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot skinid="ht_node" target="-20.2/5.3/48.7" tilt="-5.6" title="Знак тренажеру " description="" id="Point02" pan="-101.13" distance="16.3333" url="{node16}"/>
+      <hotspot skinid="ht_node" target="-74.7/5.9/120.0" tilt="-0.74" title="Кімната з тренажером" description="" id="Point01" pan="-190.84" url="{node3}"/>
+    </hotspots>
+    <media/>
+    <transition blendcolor="0x000000" zoomout="0" zoomoutpause="1" enabled="1" type="crossdissolve" blendtime="2" softedge="10" zoomspeed="2" zoomin="0" zoomfov="20"/>
+    <autorotate nodedelay="0.00" enabled="1" useanimation="0" speed="0.300" noderandom="1" delay="7.00" nodefilter="" returntohorizon="0.000" startloaded="0"/>
+    <flyintransition enabled="1" speed="2.00"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboardzoom="0" lockedwheel="0" invertwheel="0" speedwheel="1" dblclickfullscreen="0" sensitivity="8" rubberband="0" contextprojections="0" invertcontrol="1" lockedkeyboard="0" hideabout="0" contextfullscreen="1"/>
+  </panorama>
+  <masternode>
+    <userdata source="" tags="" nodeid="master" heading="0" title="" description="" info="" copyright="" latitude="" author="" datetime="" customnodeid="" longitude="" comment=""/>
+  </masternode>
+</tour>
